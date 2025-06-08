@@ -1,35 +1,65 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #f9f9f9, #e0f7fa);
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 40px;
-}
-
-#addSquare, #resetSquares {
-    padding: 10px 20px;
+    color: #333;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #addSquare, #resetSquares {
+    padding: 12px 24px;
     font-size: 16px;
-    margin-bottom: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    margin-right: 5px;
-}
-
-#squareContainer {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    transition: transform 0.2s, box-shadow 0.3s;
+  }
+  
+  #addSquare:hover, #resetSquares:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 114, 255, 0.3);
+  }
+  
+  #squareContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    max-width: 300px;
-}
-
-.square {
-    width: 50px;
-    height: 50px;
+    gap: 12px;
+    justify-content: center;
+    max-width: 340px;
+  }
+  
+  .square {
+    width: 60px;
+    height: 60px;
     background-color: white;
-    border: 2px solid black;
+    border-radius: 10px;
+    border: 2px solid #0072ff;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-}
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .square:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0,114,255,0.5);
+  }
+  
